@@ -1,0 +1,11 @@
+# Raw source footage — do NOT publish (huge, unneeded on the live site)
+_raw-videos/
+
+# OS / editor junk
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
+# QA / scratch
+*_qa*.png
+contact_sheet.png

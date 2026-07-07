@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Roots to Fruits — Landscape &amp; Build | Lava Rock Walls, Pillars, Fences &amp; Landscapes</title>
+<meta name="description" content="Roots to Fruits Landscape & Build — Hawaiian craftsmanship in lava rock walls, property-line and driveway pillars, fences, ponds, patios, walkways, and full landscape vision. Bringing your vision to life." />
+
+<!-- ============================================================
+     ROOTS TO FRUITS — LANDSCAPE & BUILD
+     Single-file starter site for GitHub Pages.
+     PLACEHOLDERS are marked with  <!-- SWAP -->  comments and the
+     .placeholder styling. Replace logo, photos, contact info,
+     Formspree endpoint, and video IDs where noted.
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --black:#0d0d0c;
+    --ink:#161513;
+    --panel:#1c1a17;
+    --gold:#c8a24a;
+    --gold-bright:#e4c67e;
+    --cream:#f4efe6;
+    --stone:#b9b1a3;
+    --green:#4f6144;
+    --green-deep:#33402c;
+    --brown:#5b4636;
+    --line:rgba(200,162,74,.28);
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Montserrat',system-ui,sans-serif;
+    color:var(--cream);
+    background:var(--black);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+  .gold{color:var(--gold)}
+  .eyebrow{
+    font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin-bottom:16px;
+  }
+  section{padding:96px 0;position:relative}
+  .section-title{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:10px}
+  .section-lede{color:var(--stone);max-width:640px;font-weight:300;font-size:1.05rem;margin-bottom:44px}
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(13,13,12,.82);backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(200,162,74,.14);
+    transition:padding .3s ease,background .3s ease;
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 26px;max-width:var(--maxw);margin:0 auto}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{
+    width:40px;height:40px;border-radius:50%;
+    border:1.5px solid var(--gold);
+    display:grid;place-items:center;
+    font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--gold);
+    background:radial-gradient(circle at 30% 30%,#2a2620,#0d0d0c);
+    flex:none;
+  }
+  .brand-name{font-family:'Cormorant Garamond',serif;font-size:1.32rem;letter-spacing:.02em;line-height:1}
+  .brand-name small{display:block;font-family:'Montserrat',sans-serif;font-size:.56rem;letter-spacing:.34em;text-transform:uppercase;color:var(--stone);margin-top:3px}
+  nav.jump{display:flex;gap:26px;align-items:center}
+  nav.jump a{font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;color:var(--stone);font-weight:500;transition:color .2s}
+  nav.jump a:hover{color:var(--gold)}
+  nav.jump a.cta{
+    border:1px solid var(--gold);color:var(--gold);
+    padding:9px 18px;border-radius:2px;
+  }
+  nav.jump a.cta:hover{background:var(--gold);color:var(--black)}
+  .menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--gold);padding:8px 12px;border-radius:2px;font-size:1.1rem;cursor:pointer}
+  @media(max-width:900px){
+    nav.jump{
+      position:fixed;inset:64px 0 auto 0;flex-direction:column;gap:0;
+      background:var(--ink);border-bottom:1px solid var(--line);
+      max-height:0;overflow:hidden;transition:max-height .35s ease;
+    }
+    nav.jump.open{max-height:460px}
+    nav.jump a{padding:16px 26px;width:100%;border-top:1px solid rgba(255,255,255,.05)}
+    nav.jump a.cta{margin:14px 26px;text-align:center}
+    .menu-btn{display:block}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100vh;display:flex;align-items:flex-start;
+    padding-top:96px;padding-bottom:70px;position:relative;overflow:hidden;
+    /* SWAP: replace the gradient below with your best hero photo:
+       background:url('images/hero.jpg') center/cover; */
+    background:
+      radial-gradient(1200px 600px at 70% -10%,rgba(79,97,68,.28),transparent 60%),
+      radial-gradient(900px 500px at 10% 110%,rgba(91,70,54,.35),transparent 60%),
+      linear-gradient(180deg,#0d0d0c 0%,#141310 55%,#0d0d0c 100%);
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M0 59h60M59 0v60' stroke='%23c8a24a' stroke-opacity='.05'/%3E%3C/svg%3E");
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;z-index:2;max-width:860px;margin:0 auto;text-align:center}
+  .hero h1{font-size:clamp(2.8rem,7vw,5.4rem);margin:14px 0 20px}
+  .hero h1 em{font-style:italic;color:var(--gold)}
+  .hero p.lead{font-size:clamp(1.05rem,2.2vw,1.35rem);color:var(--cream);font-weight:300;max-width:660px;margin:0 auto 14px}
+  .hero p.sub{color:var(--stone);font-weight:300;max-width:620px;margin:0 auto 36px}
+  .btns{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+  .btn{
+    display:inline-block;padding:15px 30px;border-radius:2px;
+    font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+    transition:transform .2s,box-shadow .2s,background .2s;
+  }
+  .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-bright));color:var(--black);box-shadow:0 10px 30px rgba(200,162,74,.22)}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 38px rgba(200,162,74,.34)}
+  .btn-ghost{border:1px solid var(--line);color:var(--cream)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .scroll-cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);color:var(--stone);font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;z-index:2;animation:bob 2.4s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+  /* ---------- POSITIONING BAND ---------- */
+  .vision-band{background:linear-gradient(180deg,#0d0d0c,#12110f);border-top:1px solid rgba(200,162,74,.12);border-bottom:1px solid rgba(200,162,74,.12)}
+  .vision-band .wrap{text-align:center}
+  .vision-band p.big{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.6vw,2.5rem);font-weight:500;line-height:1.35;max-width:900px;margin:0 auto}
+
+  /* ---------- SERVICES ---------- */
+  .grid{display:grid;gap:22px}
+  .cards-3{grid-template-columns:repeat(3,1fr)}
+  .cards-2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:860px){.cards-3,.cards-2{grid-template-columns:1fr}}
+  .card{
+    background:linear-gradient(180deg,var(--panel),#151310);
+    border:1px solid rgba(200,162,74,.16);
+    border-radius:4px;padding:32px 28px;position:relative;overflow:hidden;
+    transition:transform .25s,border-color .25s;
+  }
+  .card:hover{transform:translateY(-4px);border-color:var(--gold)}
+  .card::before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--gold),transparent)}
+  .card .ico{width:46px;height:46px;margin-bottom:18px;color:var(--gold)}
+  .card h3{font-size:1.5rem;margin-bottom:10px}
+  .card p{color:var(--stone);font-weight:300;font-size:.96rem}
+  .tag{display:inline-block;margin-top:16px;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green);border:1px solid rgba(79,97,68,.5);padding:4px 10px;border-radius:2px}
+
+  /* ---------- SIGNATURE (rock wall feature) ---------- */
+  #rockwalls{background:linear-gradient(180deg,#12110f,#0d0d0c)}
+  .feature{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  @media(max-width:860px){.feature{grid-template-columns:1fr;gap:30px}}
+  .feature-media{
+    aspect-ratio:4/3;border-radius:6px;border:1px solid var(--line);
+    /* SWAP: background:url('images/rockwall.jpg') center/cover; */
+    background:
+      linear-gradient(135deg,rgba(79,97,68,.25),transparent),
+      repeating-linear-gradient(115deg,#211d17 0 14px,#1a1712 14px 26px),
+      #1c1a17;
+    display:grid;place-items:center;color:var(--stone);position:relative;
+  }
+  .feature-media .ph-note{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;opacity:.6}
+  .tiers{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+  @media(max-width:520px){.tiers{grid-template-columns:1fr}}
+  .tier{border:1px solid rgba(200,162,74,.2);border-radius:4px;padding:20px;background:rgba(255,255,255,.015)}
+  .tier h4{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--gold);margin-bottom:6px}
+  .tier p{color:var(--stone);font-size:.86rem;font-weight:300}
+  ul.checks{list-style:none;margin-top:18px}
+  ul.checks li{padding:8px 0 8px 28px;position:relative;color:var(--cream);font-weight:300;border-bottom:1px solid rgba(255,255,255,.05)}
+  ul.checks li::before{content:"";position:absolute;left:0;top:15px;width:12px;height:12px;border:1.5px solid var(--gold);border-top:none;border-right:none;transform:rotate(-45deg)}
+
+  /* ---------- PORTFOLIO ---------- */
+  #portfolio{background:linear-gradient(180deg,#0d0d0c,#12110f)}
+  /* masonry so each clip keeps its own shape (portrait or landscape) */
+  .video-cols{columns:3;column-gap:18px}
+  @media(max-width:900px){.video-cols{columns:2}}
+  @media(max-width:560px){.video-cols{columns:1}}
+  .vitem{
+    break-inside:avoid;margin:0 0 18px;border-radius:6px;overflow:hidden;
+    border:1px solid rgba(200,162,74,.18);
+    background:linear-gradient(180deg,#1e1b16,#141210);
+    transition:border-color .25s,transform .25s;
+  }
+  .vitem:hover{border-color:var(--gold);transform:translateY(-3px)}
+  .vitem video{display:block;width:100%;height:auto;background:#000;cursor:pointer}
+  .vitem figcaption{padding:15px 17px 18px}
+  .vitem figcaption small{display:block;color:var(--gold);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:5px}
+  .vitem figcaption b{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;line-height:1.12;display:block}
+  .vitem figcaption span{display:block;color:var(--stone);font-size:.86rem;font-weight:300;margin-top:5px}
+  /* about photo */
+  #about .about-photo{aspect-ratio:auto;background:none;border:none;display:block;padding:0}
+  #about .about-photo img{width:100%;height:auto;display:block;border-radius:6px;border:1px solid var(--line)}
+
+  /* ---------- ABOUT ---------- */
+  #about .feature-media{
+    /* SWAP: background:url('images/about.jpg') center/cover; */
+    background:linear-gradient(135deg,rgba(91,70,54,.3),transparent),repeating-linear-gradient(160deg,#221c16 0 18px,#191410 18px 34px),#1c1a17;
+  }
+  .about-text p{color:var(--stone);font-weight:300;margin-bottom:16px}
+  .about-text p strong{color:var(--cream);font-weight:500}
+
+  /* ---------- CONTACT ---------- */
+  #contact{background:radial-gradient(900px 500px at 80% 0%,rgba(79,97,68,.16),transparent 60%),linear-gradient(180deg,#12110f,#0d0d0c)}
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px}
+  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:34px}}
+  .contact-info h3{font-size:1.9rem;margin-bottom:14px}
+  .contact-info p{color:var(--stone);font-weight:300;margin-bottom:22px}
+  .info-row{display:flex;gap:14px;align-items:center;margin-bottom:16px;color:var(--cream);font-weight:300}
+  .info-row .ico{width:22px;height:22px;color:var(--gold);flex:none}
+  .info-row a{color:var(--cream);text-decoration:none;transition:color .2s}
+  .info-row a:hover{color:var(--gold)}
+  form{background:linear-gradient(180deg,var(--panel),#151310);border:1px solid rgba(200,162,74,.18);border-radius:6px;padding:34px}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:600}
+  .field input,.field textarea,.field select{
+    width:100%;background:#0e0d0b;border:1px solid rgba(200,162,74,.22);border-radius:3px;
+    padding:13px 14px;color:var(--cream);font-family:inherit;font-size:.95rem;transition:border-color .2s;
+  }
+  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--gold)}
+  .field textarea{min-height:120px;resize:vertical}
+  .field.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:520px){.field.two{grid-template-columns:1fr}}
+  form .btn{width:100%;border:none;cursor:pointer;font-family:inherit}
+  .form-note{font-size:.76rem;color:var(--stone);margin-top:14px;text-align:center;font-weight:300}
+  .form-status{margin-top:16px;text-align:center;font-weight:400;padding:14px;border-radius:4px}
+  .form-status.ok{color:var(--gold-bright);border:1px solid var(--line);background:rgba(200,162,74,.06)}
+  .form-status.err{color:#e6a17e;border:1px solid rgba(230,120,90,.4);background:rgba(230,120,90,.06)}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#0a0a09;border-top:1px solid rgba(200,162,74,.14);padding:46px 0 30px}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .foot small{color:var(--stone);font-weight:300;font-size:.8rem}
+  .foot .brand-name{font-size:1.1rem}
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  .placeholder{outline:1px dashed rgba(200,162,74,.4)}
+
+  /* ---------- LOGO + ISLANDS (added) ---------- */
+  .brand-logo{height:48px;width:auto;display:block;flex:none}
+  .foot .brand-logo{height:52px}
+  .hero-logo{
+    width:min(90vw,470px);height:auto;display:block;
+    margin:0 auto 28px;
+    filter:drop-shadow(0 18px 42px rgba(0,0,0,.55));
+  }
+  @media(max-width:600px){.hero-logo{width:min(86vw,340px)}}
+  .islands{margin-top:34px}
+  .islands img{
+    width:100%;max-width:420px;border-radius:6px;
+    /* drops the image's black background so it melts into the dark site */
+    mix-blend-mode:lighten;
+  }
+  .islands figcaption{margin-top:12px;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAV ==================== -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="brand">
+      <img class="brand-logo" src="images/logo.png" alt="Roots to Fruits — Landscape &amp; Build" />
+      <span class="brand-name">Roots to Fruits<small>Landscape &amp; Build</small></span>
+    </a>
+    <button class="menu-btn" onclick="document.getElementById('jumpnav').classList.toggle('open')">☰</button>
+    <nav class="jump" id="jumpnav">
+      <a href="#rockwalls">Rock Walls</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="cta">Get an Estimate</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="home">
+  <div class="wrap hero-inner reveal">
+    <img class="hero-logo" src="images/logo.png" alt="Roots to Fruits — Landscape &amp; Build" />
+    <div class="eyebrow">Hawaiian Craftsmanship · Lava Rock &amp; Landscape</div>
+    <h1>Built from the ground up.<br><em>Crafted stone by stone.</em></h1>
+    <p class="lead">Lava rock walls, pillars, fences, ponds, and full landscapes — crafted stone by stone for the island homes that deserve them.</p>
+    <p class="sub">You have a vision for your home and your land. I bring the craftsmanship, the eye, and the hands to make it real.</p>
+    <div class="btns">
+      <a href="#contact" class="btn btn-gold">Request an Estimate</a>
+      <a href="#portfolio" class="btn btn-ghost">See the Work</a>
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll</div>
+</section>
+
+<!-- ==================== VISION BAND ==================== -->
+<section class="vision-band" style="padding:70px 0">
+  <div class="wrap reveal">
+    <p class="big">A vision is rarely just one thing. It's the wall, the walkway, the water, and the way it all sits together. I come to the table as your partner — to help you <span class="gold">bring the whole vision to life.</span></p>
+  </div>
+</section>
+
+<!-- ==================== SIGNATURE: ROCK WALLS ==================== -->
+<section id="rockwalls">
+  <div class="wrap">
+    <div class="feature">
+      <div class="feature-media reveal placeholder">
+        <span class="ph-note">Photo / video — signature lava rock wall</span>
+      </div>
+      <div class="reveal">
+        <div class="eyebrow">The Signature</div>
+        <h2 class="section-title">Lava Rock Walls</h2>
+        <p class="section-lede" style="margin-bottom:20px">My foundation and my specialty: two-faced lava rock walls with mortared centers — built for property-line borders that stand strong and look striking from both sides.</p>
+        <div class="tiers">
+          <div class="tier">
+            <h4>Rough Face</h4>
+            <p>Natural lava rock, laid in its raw character. Rugged, timeless, and true to the island.</p>
+          </div>
+          <div class="tier">
+            <h4>Premium Cut</h4>
+            <p>Every stone hand-cut and shaped for flat faces and sharp corners — a refined, architectural finish.</p>
+          </div>
+        </div>
+        <ul class="checks">
+          <li>Two-face construction with mortared center</li>
+          <li>Property-line pillars &amp; driveway pillars in matching lava rock</li>
+          <li>Fences built on top &amp; anchored into the wall</li>
+          <li>Rock-wall garden beds</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SERVICES ==================== -->
+<section id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">What I Build</div>
+      <h2 class="section-title">Craft for the Whole Property</h2>
+      <p class="section-lede">From the border stone to the garden it frames — a full range of hardscape and landscape, done by one set of hands with one standard.</p>
+    </div>
+    <div class="grid cards-3">
+      <div class="card reveal">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="14" width="6" height="6"/><rect x="9.5" y="14" width="5" height="6"/><rect x="15" y="14" width="6" height="6"/><rect x="4.5" y="8" width="6" height="6"/><rect x="11" y="8" width="8" height="6"/><rect x="6" y="4" width="12" height="4"/></svg>
+        <h3>Rock Walls &amp; Pillars</h3>
+        <p>Two-faced lava rock property-line walls, driveway and property-line pillars — rough face or premium cut.</p>
+        <span class="tag">Specialty</span>
+      </div>
+      <div class="card reveal">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 20V8m5 12V8m5 12V8m5 12V8M2 8h20M4 5l8-2 8 2"/></svg>
+        <h3>Fences</h3>
+        <p>Standalone fencing, or fences anchored on top of your rock wall — a seamless, elevated border.</p>
+        <span class="tag">Standalone or on-wall</span>
+      </div>
+      <div class="card reveal">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0M3 21c2-2 4-2 6 0s4 2 6 0 4-2 6 0M12 3c2 3 4 5 4 8a4 4 0 0 1-8 0c0-3 2-5 4-8Z"/></svg>
+        <h3>Ponds &amp; Water</h3>
+        <p>Custom ponds and water features that bring movement, sound, and life into the landscape.</p>
+        <span class="tag">Water features</span>
+      </div>
+      <div class="card reveal">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20h16M4 20V9l8-5 8 5v11M9 20v-6h6v6"/><path d="M4 12h16"/></svg>
+        <h3>Patios &amp; Walkways</h3>
+        <p>Hardscape patios, paths, and walkways that connect your spaces and invite you through them.</p>
+        <span class="tag">Hardscape</span>
+      </div>
+      <div class="card reveal">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c0-6 0-9 4-13M12 22c0-5 0-8-4-12M12 9c3-1 5-3 6-6-3 0-5 1-6 3-1-2-3-3-6-3 1 3 3 5 6 6Z"/></svg>
+        <h3>Rock-Wall Garden Beds</h3>
+        <p>Raised beds framed in lava rock — structure and beauty for your plantings and produce.</p>
+        <span class="tag">Grow</span>
+      </div>
+      <div class="card reveal">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+        <h3>Landscape Vision &amp; Planning</h3>
+        <p>Sit down with me to shape the whole picture — layout, flow, and how every piece works together.</p>
+        <span class="tag">Design</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PORTFOLIO ==================== -->
+<section id="portfolio">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">The Portfolio</div>
+      <h2 class="section-title">Vision, Made Real</h2>
+      <p class="section-lede">A dozen projects, in motion. Walk the walls, hear the water, and see the craft from every angle — tap any clip to play.</p>
+    </div>
+    <div class="video-cols">
+
+      <figure class="vitem reveal">
+        <video controls preload="none" playsinline poster="videos/rock-wall-poster.jpg"><source src="videos/rock-wall.mp4" type="video/mp4"></video>
+        <figcaption><small>Lava Rock Wall</small><b>The Two-Face Border Wall</b><span>Hand-laid lava rock — strong and striking from both sides.</span></figcaption>
+      </figure>
+
+      <figure class="vitem reveal">
+        <video controls preload="none" playsinline poster="videos/pillars-poster.jpg"><source src="videos/pillars.mp4" type="video/mp4"></video>
+        <figcaption><small>Pillars</small><b>Driveway &amp; Property-Line Pillars</b><span>Bold lava rock columns that frame the entrance and mark the line.</span></figcaption>
+      </figure>
+
+      <figure class="vitem reveal">
+        <video controls preload="none" playsinline poster="videos/dry-stack-gardens-poster.jpg"><source src="videos/dry-stack-gardens.mp4" type="video/mp4"></video>
+        <figcaption><small>Garden Beds</small><b>Dry-Stack Garden Beds</b><span>Mortar-free stacked stone, built to hold your garden and last.</span></figcaption>
+      </figure>
+
+      <figure class="vitem reveal">
+        <video controls preload="none" playsinline poster="videos/hillside-transformation-poster.jpg"><source src="videos/hillside-transformation.mp4" type="video/mp4"></video>
+        <figcaption><small>Transformation</small><b>Hillside Reborn</b><span>A raw slope terraced into rock walls and layered garden beds.</span></figcaption>
+      </figure>
+
+      <figure class="vitem reveal">
+        <video controls preload="none" playsinline poster="videos/hip-wall-lanai-poster.jpg"><source src="videos/hip-wall-lanai.mp4" type="video/mp4"></video>
+        <figcaption><small>Build</small><b>Hip Wall &amp; Screened Lanai</b><span>From rock-wall foundation to a finished, screened-in living space.</span></figcaption>
+      </figure>
+
+      <figure class="vitem reveal">
+        <video controls preload="none" playsinline poster="videos/koi-pond-waterfall-poster.jpg"><source src="videos/koi-pond-waterfall.mp4" type="video/mp4"></video>
+        <figcaption><small>Water Feature</small><b>Koi Pond &amp; Waterfall</b><span>Living water you can hear from the lanai.</span></figcaption>
+      </figure>
+
+      <figure class="vitem reveal">
+        <video controls preload="none" playsinline poster="videos/lava-rock-stairs-poster.jpg"><source src="videos/lava-rock-stairs.mp4" type="video/mp4"></video>
+        <figcaption><small>Hardscape</small><b>Lava Rock Stairs</b><span>Solid stone steps that rise like they grew from the land.</span></figcaption>
+      </figure>
+
+      <figure class="vitem reveal">
+        <video controls preload="none" playsinline poster="videos/patio-poster.jpg"><source src="videos/patio.mp4" type="video/mp4"></video>
+        <figcaption><small>Patio</small><b>Custom Stone Patio</b><span>An outdoor room, built to gather on.</span></figcaption>
+      </figure>
+
+      <figure class="vitem reveal">
+        <video controls preload="none" playsinline poster="videos/pond-wall-patio-poster.jpg"><source src="videos/pond-wall-patio.mp4" type="video/mp4"></video>
+        <figcaption><small>Full Vision</small><b>Pond, Wall &amp; Patio</b><span>Three elements woven into one seamless backyard.</span></figcaption>
+      </figure>
+
+      <figure class="vitem reveal">
+        <video controls preload="none" playsinline poster="videos/pond-wall-patio-stairs-poster.jpg"><source src="videos/pond-wall-patio-stairs.mp4" type="video/mp4"></video>
+        <figcaption><small>Full Vision</small><b>The Complete Backyard</b><span>Pond, rock wall, patio, and stairs — a whole space transformed.</span></figcaption>
+      </figure>
+
+      <figure class="vitem reveal">
+        <video controls preload="none" playsinline poster="videos/pond-waterfall-gardens-poster.jpg"><source src="videos/pond-waterfall-gardens.mp4" type="video/mp4"></video>
+        <figcaption><small>Water &amp; Garden</small><b>Pond, Waterfall &amp; Garden Beds</b><span>Water and greenery, designed to grow together.</span></figcaption>
+      </figure>
+
+      <figure class="vitem reveal">
+        <video controls preload="none" playsinline poster="videos/pool-walls-waterfalls-poster.jpg"><source src="videos/pool-walls-waterfalls.mp4" type="video/mp4"></video>
+        <figcaption><small>Showcase</small><b>Pool, Walls &amp; Waterfalls</b><span>The full estate treatment — stone, water, and scale.</span></figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ABOUT ==================== -->
+<section id="about">
+  <div class="wrap">
+    <div class="feature">
+      <div class="reveal about-text">
+        <div class="eyebrow">The Craftsman</div>
+        <h2 class="section-title">Roots to Fruits</h2>
+        <p><strong>I know you have a vision for your home and your land.</strong> Maybe it starts with a rock wall along the property line. But it rarely ends there — there's the fence on top, the pillars at the drive, the garden beds, the pond you can hear from the lanai.</p>
+        <p>I specialize in all of it, and I come to the table as more than a builder. I come as a partner who can see the whole picture with you and help bring it to life — one honest stone at a time.</p>
+        <p>Rooted in Hawaiian craftsmanship. Grounded in earth and stone. Built to bear fruit for years to come.</p>
+        <a href="#contact" class="btn btn-gold" style="margin-top:10px">Start the Conversation</a>
+      </div>
+      <div class="feature-media about-photo reveal">
+        <img src="images/finished-work.jpg" alt="A finished Roots to Fruits lava rock project" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="eyebrow">Get an Estimate</div>
+        <h3>Let's talk about your vision.</h3>
+        <p>Tell me about your property and what you're picturing. I'll follow up with next steps and a rough estimate.</p>
+        <div class="info-row"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg><a href="tel:+18083591841">808-359-1841</a></div>
+        <div class="info-row"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg><a href="mailto:rootstofruitslab@gmail.com">rootstofruitslab@gmail.com</a></div>
+        <div class="info-row"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Serving the Big Island — Puna to Hilo</span></div>
+        <figure class="islands">
+          <img src="images/hawaiian-islands.png" alt="Hawaiʻi — the Big Island" />
+          <figcaption>Serving the Big Island — Puna to Hilo</figcaption>
+        </figure>
+      </div>
+
+      <!-- SWAP: replace action="..." with your Formspree endpoint,
+           e.g. action="https://formspree.io/f/xxxxxxx" -->
+      <form id="leadForm" class="reveal" action="https://formspree.io/f/xnjkrlgn" method="POST">
+        <div class="field two">
+          <div><label for="name">Name</label><input id="name" type="text" name="name" required /></div>
+          <div><label for="phone">Phone</label><input id="phone" type="tel" name="phone" /></div>
+        </div>
+        <div class="field"><label for="email">Email</label><input id="email" type="email" name="email" required /></div>
+        <div class="field"><label for="address">Property Address</label><input id="address" type="text" name="address" placeholder="Street, town, island" /></div>
+        <div class="field">
+          <label for="service">What are you interested in?</label>
+          <select id="service" name="service">
+            <option>Lava rock wall (rough face)</option>
+            <option>Lava rock wall (premium cut)</option>
+            <option>Pillars — property line / driveway</option>
+            <option>Fence (standalone or on wall)</option>
+            <option>Pond / water feature</option>
+            <option>Patio / walkway</option>
+            <option>Rock-wall garden beds</option>
+            <option>Landscape vision &amp; planning</option>
+            <option>A full vision — several of these</option>
+          </select>
+        </div>
+        <div class="field"><label for="message">Tell me about your vision</label><textarea id="message" name="message" placeholder="What are you picturing? Approximate wall length, property details, timeline…"></textarea></div>
+        <button type="submit" class="btn btn-gold">Send My Request</button>
+        <p class="form-note">Your details go straight to Jesse. No spam, ever.</p>
+        <p class="form-status" id="formStatus" role="status" hidden></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="wrap foot">
+    <div class="brand">
+      <img class="brand-logo" src="images/logo.png" alt="Roots to Fruits — Landscape &amp; Build" />
+      <span class="brand-name">Roots to Fruits<small>Landscape &amp; Build</small></span>
+    </div>
+    <small>© <span id="yr"></span> Roots to Fruits Landscape &amp; Build · Hawaii · Built stone by stone.</small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* ---------- reveal on scroll ---------- */
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  /* close mobile menu on link click */
+  document.querySelectorAll('#jumpnav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('jumpnav').classList.remove('open')));
+
+  /* pause any other clip when one starts playing */
+  document.querySelectorAll('.vitem video').forEach(v=>{
+    v.addEventListener('play',()=>{
+      document.querySelectorAll('.vitem video').forEach(o=>{ if(o!==v) o.pause(); });
+    });
+  });
+
+  /* AJAX lead form — keeps people on the site with an inline thank-you */
+  const form = document.getElementById('leadForm');
+  const status = document.getElementById('formStatus');
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    const btn = form.querySelector('button[type=submit]');
+    const original = btn.textContent;
+    btn.textContent = 'Sending…'; btn.disabled = true;
+    try{
+      const res = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} });
+      if(res.ok){
+        form.reset();
+        status.hidden = false; status.className = 'form-status ok';
+        status.textContent = 'Mahalo! Your request is on its way — Jesse will be in touch soon.';
+        btn.textContent = 'Sent ✓';
+      }else{
+        const data = await res.json().catch(()=>({}));
+        throw new Error((data.errors && data.errors.map(x=>x.message).join(', ')) || 'Something went wrong.');
+      }
+    }catch(err){
+      status.hidden = false; status.className = 'form-status err';
+      status.textContent = 'Sorry — that didn\'t send. Please call or text 808-359-1841, or email rootstofruitslab@gmail.com.';
+      btn.textContent = original; btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
