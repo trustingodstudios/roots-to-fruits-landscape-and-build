@@ -6,6 +6,24 @@
 <title>Roots to Fruits — Landscape &amp; Build | Lava Rock Walls, Pillars, Fences &amp; Landscapes</title>
 <meta name="description" content="Roots to Fruits Landscape & Build — Hawaiian craftsmanship in lava rock walls, property-line and driveway pillars, fences, ponds, patios, walkways, and full landscape vision. Bringing your vision to life." />
 
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo.png" />
+<link rel="apple-touch-icon" href="images/logo.png" />
+
+<!-- Social share preview (Open Graph + Twitter) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Roots to Fruits — Landscape &amp; Build" />
+<meta property="og:title" content="Roots to Fruits — Landscape &amp; Build" />
+<meta property="og:description" content="Hawaiian craftsmanship in lava rock walls, pillars, fences, ponds, patios, and full landscapes. Serving the Big Island, Puna to Hilo — bringing your vision to life." />
+<meta property="og:url" content="https://rootstofruitshawaii.com/" />
+<meta property="og:image" content="https://rootstofruitshawaii.com/images/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Roots to Fruits — Landscape &amp; Build" />
+<meta name="twitter:description" content="Hawaiian craftsmanship in lava rock walls, pillars, fences, ponds, patios, and full landscapes. Serving the Big Island, Puna to Hilo." />
+<meta name="twitter:image" content="https://rootstofruitshawaii.com/images/og-image.jpg" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -233,6 +251,16 @@
   .portfolio-nudge span{display:block;margin-top:10px;font-size:1.4rem;color:var(--gold);font-style:normal;animation:nudge 2s ease-in-out infinite}
   @keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
 
+  /* ---------- REVIEWS ---------- */
+  #reviews{background:linear-gradient(180deg,#0d0d0c,#12110f)}
+  #reviews .section-title{text-align:center}
+  .stars{display:inline-flex;flex-direction:row-reverse;justify-content:center;gap:6px}
+  .stars input{display:none}
+  .stars label{font-size:2rem;line-height:1;color:#413c34;cursor:pointer;transition:color .15s}
+  .stars label:hover,.stars label:hover ~ label,.stars input:checked ~ label{color:var(--gold)}
+  .perm{display:flex;gap:10px;align-items:flex-start;color:var(--stone);font-weight:300;font-size:.9rem;margin:4px 0 22px;cursor:pointer}
+  .perm input{margin-top:4px;accent-color:var(--gold)}
+
   /* ---------- FOOTER ---------- */
   footer{background:#0a0a09;border-top:1px solid rgba(200,162,74,.14);padding:46px 0 30px}
   .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
@@ -278,6 +306,7 @@
       <a href="#services">Services</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
       <a href="#contact" class="cta">Get an Estimate</a>
     </nav>
   </div>
@@ -531,6 +560,42 @@
   </div>
 </section>
 
+<!-- ==================== REVIEWS ==================== -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;max-width:720px;margin:0 auto">
+      <div class="eyebrow" style="text-align:center">Kind Words</div>
+      <h2 class="section-title">Leave a Review</h2>
+      <p class="section-lede" style="margin:0 auto 30px">Did we build something for you? I'd be honored if you'd share how it went — your words help other island families find honest craftsmanship.</p>
+      <a href="https://g.page/r/CY4qAdwirEj0EBM/review" class="btn btn-gold" target="_blank" rel="noopener">★ Review us on Google</a>
+      <p class="form-note" style="margin-bottom:40px">The fastest way to help — it takes about 30 seconds.</p>
+    </div>
+
+    <form id="reviewForm" class="reveal" action="https://formspree.io/f/xnjkrlgn" method="POST" style="max-width:620px;margin:0 auto">
+      <input type="hidden" name="_subject" value="⭐ New website review — Roots to Fruits" />
+      <input type="hidden" name="form-type" value="review" />
+      <div class="field two">
+        <div><label for="rname">Your Name</label><input id="rname" type="text" name="name" required /></div>
+        <div><label for="rtown">Town / Area</label><input id="rtown" type="text" name="town" placeholder="e.g. Pāhoa, Hilo" /></div>
+      </div>
+      <div class="field">
+        <label>Your Rating</label>
+        <div class="stars">
+          <input type="radio" id="s5" name="rating" value="5 stars" required /><label for="s5" title="5 stars">★</label>
+          <input type="radio" id="s4" name="rating" value="4 stars" /><label for="s4" title="4 stars">★</label>
+          <input type="radio" id="s3" name="rating" value="3 stars" /><label for="s3" title="3 stars">★</label>
+          <input type="radio" id="s2" name="rating" value="2 stars" /><label for="s2" title="2 stars">★</label>
+          <input type="radio" id="s1" name="rating" value="1 star" /><label for="s1" title="1 star">★</label>
+        </div>
+      </div>
+      <div class="field"><label for="rtext">Your Review</label><textarea id="rtext" name="review" placeholder="What did we build for you, and how was the experience?" required></textarea></div>
+      <label class="perm"><input type="checkbox" name="ok_to_feature" value="Yes" /> It's OK to feature my review on the Roots to Fruits website.</label>
+      <button type="submit" class="btn btn-gold">Submit Review</button>
+      <p class="form-status" id="reviewStatus" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+
 <!-- ==================== FOOTER ==================== -->
 <footer>
   <div class="wrap foot">
@@ -586,6 +651,30 @@
       btn.textContent = original; btn.disabled = false;
     }
   });
+
+  /* AJAX review form */
+  const rform = document.getElementById('reviewForm');
+  if(rform){
+    const rstatus = document.getElementById('reviewStatus');
+    rform.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const b = rform.querySelector('button[type=submit]');
+      const o = b.textContent; b.textContent = 'Sending…'; b.disabled = true;
+      try{
+        const res = await fetch(rform.action, { method:'POST', body:new FormData(rform), headers:{'Accept':'application/json'} });
+        if(res.ok){
+          rform.reset();
+          rstatus.hidden = false; rstatus.className = 'form-status ok';
+          rstatus.textContent = 'Mahalo for your review — it means the world. 🙏';
+          b.textContent = 'Submitted ✓';
+        }else{ throw new Error('failed'); }
+      }catch(err){
+        rstatus.hidden = false; rstatus.className = 'form-status err';
+        rstatus.textContent = 'Sorry — that didn\'t send. Please try the “Review us on Google” button above.';
+        b.textContent = o; b.disabled = false;
+      }
+    });
+  }
 </script>
 </body>
 </html>
