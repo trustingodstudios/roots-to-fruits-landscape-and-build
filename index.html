@@ -6,14 +6,6 @@
 <title>Roots to Fruits — Landscape &amp; Build | Lava Rock Walls, Pillars, Fences &amp; Landscapes</title>
 <meta name="description" content="Roots to Fruits Landscape & Build — Hawaiian craftsmanship in lava rock walls, property-line and driveway pillars, fences, ponds, patios, walkways, and full landscape vision. Bringing your vision to life." />
 
-<!-- ============================================================
-     ROOTS TO FRUITS — LANDSCAPE & BUILD
-     Single-file starter site for GitHub Pages.
-     PLACEHOLDERS are marked with  <!-- SWAP -->  comments and the
-     .placeholder styling. Replace logo, photos, contact info,
-     Formspree endpoint, and video IDs where noted.
-     ============================================================ -->
-
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -167,6 +159,10 @@
     display:grid;place-items:center;color:var(--stone);position:relative;
   }
   .feature-media .ph-note{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;opacity:.6}
+  /* signature rock-wall image (falls back to texture if the file is missing) */
+  #rockwalls .signature-media{aspect-ratio:auto;background:none;padding:0;overflow:hidden;display:block;border:1px solid var(--line);border-radius:6px}
+  #rockwalls .signature-media img{width:100%;height:auto;display:block}
+  #rockwalls .signature-media.ph-empty{aspect-ratio:4/3;background:linear-gradient(135deg,rgba(79,97,68,.25),transparent),repeating-linear-gradient(115deg,#211d17 0 14px,#1a1712 14px 26px),#1c1a17}
   .tiers{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
   @media(max-width:520px){.tiers{grid-template-columns:1fr}}
   .tier{border:1px solid rgba(200,162,74,.2);border-radius:4px;padding:20px;background:rgba(255,255,255,.015)}
@@ -232,6 +228,10 @@
   .form-status{margin-top:16px;text-align:center;font-weight:400;padding:14px;border-radius:4px}
   .form-status.ok{color:var(--gold-bright);border:1px solid var(--line);background:rgba(200,162,74,.06)}
   .form-status.err{color:#e6a17e;border:1px solid rgba(230,120,90,.4);background:rgba(230,120,90,.06)}
+  .portfolio-nudge{display:inline-block;margin-top:44px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.2rem,2.4vw,1.6rem);color:var(--stone);transition:color .25s;line-height:1.45}
+  .portfolio-nudge:hover{color:var(--gold)}
+  .portfolio-nudge span{display:block;margin-top:10px;font-size:1.4rem;color:var(--gold);font-style:normal;animation:nudge 2s ease-in-out infinite}
+  @keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
 
   /* ---------- FOOTER ---------- */
   footer{background:#0a0a09;border-top:1px solid rgba(200,162,74,.14);padding:46px 0 30px}
@@ -310,8 +310,8 @@
 <section id="rockwalls">
   <div class="wrap">
     <div class="feature">
-      <div class="feature-media reveal placeholder">
-        <span class="ph-note">Photo / video — signature lava rock wall</span>
+      <div class="feature-media signature-media reveal">
+        <img src="images/signature-rock-wall.jpg" alt="Roots to Fruits — call Jesse for a free estimate" onerror="this.style.display='none';this.parentElement.classList.add('ph-empty')" />
       </div>
       <div class="reveal">
         <div class="eyebrow">The Signature</div>
@@ -334,6 +334,57 @@
           <li>Rock-wall garden beds</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== GET AN ESTIMATE (moved up) ==================== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="eyebrow">Get an Estimate</div>
+        <h3>Let's talk about your vision.</h3>
+        <p>Tell me about your property and what you're picturing. I'll follow up with next steps and a rough estimate.</p>
+        <div class="info-row"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg><a href="tel:+18083591841">808-359-1841</a></div>
+        <div class="info-row"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg><a href="mailto:rootstofruitslab@gmail.com">rootstofruitslab@gmail.com</a></div>
+        <div class="info-row"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Serving the Big Island — Puna to Hilo</span></div>
+        <figure class="islands">
+          <img src="images/hawaiian-islands.png" alt="Hawaiʻi — the Big Island" />
+          <figcaption>Serving the Big Island — Puna to Hilo</figcaption>
+        </figure>
+      </div>
+
+      <form id="leadForm" class="reveal" action="https://formspree.io/f/xnjkrlgn" method="POST">
+        <div class="field two">
+          <div><label for="name">Name</label><input id="name" type="text" name="name" required /></div>
+          <div><label for="phone">Phone</label><input id="phone" type="tel" name="phone" /></div>
+        </div>
+        <div class="field"><label for="email">Email</label><input id="email" type="email" name="email" required /></div>
+        <div class="field"><label for="address">Property Address</label><input id="address" type="text" name="address" placeholder="Street, town, island" /></div>
+        <div class="field">
+          <label for="service">What are you interested in?</label>
+          <select id="service" name="service">
+            <option>Lava rock wall (rough face)</option>
+            <option>Lava rock wall (premium cut)</option>
+            <option>Pillars — property line / driveway</option>
+            <option>Fence (standalone or on wall)</option>
+            <option>Pond / water feature</option>
+            <option>Patio / walkway</option>
+            <option>Rock-wall garden beds</option>
+            <option>Landscape vision &amp; planning</option>
+            <option>A full vision — several of these</option>
+          </select>
+        </div>
+        <div class="field"><label for="message">Tell me about your vision</label><textarea id="message" name="message" placeholder="What are you picturing? Approximate wall length, property details, timeline…"></textarea></div>
+        <button type="submit" class="btn btn-gold">Send My Request</button>
+        <p class="form-note">Your details go straight to Jesse. No spam, ever.</p>
+        <p class="form-status" id="formStatus" role="status" hidden></p>
+      </form>
+    </div>
+
+    <div class="reveal" style="text-align:center">
+      <a href="#portfolio" class="portfolio-nudge">Not ready to reach out just yet? Let the stone do the talking —<br>scroll down and walk the work, project by project.<span aria-hidden="true">↓</span></a>
     </div>
   </div>
 </section>
@@ -476,55 +527,6 @@
       <div class="feature-media about-photo reveal">
         <img src="images/finished-work.jpg" alt="A finished Roots to Fruits lava rock project" />
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== CONTACT ==================== -->
-<section id="contact">
-  <div class="wrap">
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <div class="eyebrow">Get an Estimate</div>
-        <h3>Let's talk about your vision.</h3>
-        <p>Tell me about your property and what you're picturing. I'll follow up with next steps and a rough estimate.</p>
-        <div class="info-row"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg><a href="tel:+18083591841">808-359-1841</a></div>
-        <div class="info-row"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg><a href="mailto:rootstofruitslab@gmail.com">rootstofruitslab@gmail.com</a></div>
-        <div class="info-row"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Serving the Big Island — Puna to Hilo</span></div>
-        <figure class="islands">
-          <img src="images/hawaiian-islands.png" alt="Hawaiʻi — the Big Island" />
-          <figcaption>Serving the Big Island — Puna to Hilo</figcaption>
-        </figure>
-      </div>
-
-      <!-- SWAP: replace action="..." with your Formspree endpoint,
-           e.g. action="https://formspree.io/f/xxxxxxx" -->
-      <form id="leadForm" class="reveal" action="https://formspree.io/f/xnjkrlgn" method="POST">
-        <div class="field two">
-          <div><label for="name">Name</label><input id="name" type="text" name="name" required /></div>
-          <div><label for="phone">Phone</label><input id="phone" type="tel" name="phone" /></div>
-        </div>
-        <div class="field"><label for="email">Email</label><input id="email" type="email" name="email" required /></div>
-        <div class="field"><label for="address">Property Address</label><input id="address" type="text" name="address" placeholder="Street, town, island" /></div>
-        <div class="field">
-          <label for="service">What are you interested in?</label>
-          <select id="service" name="service">
-            <option>Lava rock wall (rough face)</option>
-            <option>Lava rock wall (premium cut)</option>
-            <option>Pillars — property line / driveway</option>
-            <option>Fence (standalone or on wall)</option>
-            <option>Pond / water feature</option>
-            <option>Patio / walkway</option>
-            <option>Rock-wall garden beds</option>
-            <option>Landscape vision &amp; planning</option>
-            <option>A full vision — several of these</option>
-          </select>
-        </div>
-        <div class="field"><label for="message">Tell me about your vision</label><textarea id="message" name="message" placeholder="What are you picturing? Approximate wall length, property details, timeline…"></textarea></div>
-        <button type="submit" class="btn btn-gold">Send My Request</button>
-        <p class="form-note">Your details go straight to Jesse. No spam, ever.</p>
-        <p class="form-status" id="formStatus" role="status" hidden></p>
-      </form>
     </div>
   </div>
 </section>
