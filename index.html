@@ -260,6 +260,12 @@
   .stars label:hover,.stars label:hover ~ label,.stars input:checked ~ label{color:var(--gold)}
   .perm{display:flex;gap:10px;align-items:flex-start;color:var(--stone);font-weight:300;font-size:.9rem;margin:4px 0 22px;cursor:pointer}
   .perm input{margin-top:4px;accent-color:var(--gold)}
+  .testimonials{display:grid;gap:24px;max-width:760px;margin:0 auto 64px}
+  .testimonial{border:1px solid var(--line);border-radius:6px;padding:34px 34px 28px;background:rgba(200,162,74,.04);text-align:center}
+  .testimonial .t-stars{color:var(--gold);font-size:1.25rem;letter-spacing:.35em;margin-bottom:16px}
+  .testimonial blockquote{margin:0 0 18px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.15rem,2.2vw,1.4rem);line-height:1.6;color:#e8e2d6}
+  .testimonial figcaption{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .testimonial figcaption span{color:var(--stone);font-weight:300;letter-spacing:.12em;text-transform:none}
 
   /* ---------- FOOTER ---------- */
   footer{background:#0a0a09;border-top:1px solid rgba(200,162,74,.14);padding:46px 0 30px}
@@ -563,8 +569,20 @@
 <!-- ==================== REVIEWS ==================== -->
 <section id="reviews">
   <div class="wrap">
-    <div class="reveal" style="text-align:center;max-width:720px;margin:0 auto">
+    <div class="reveal" style="text-align:center;max-width:720px;margin:0 auto 44px">
       <div class="eyebrow" style="text-align:center">Kind Words</div>
+      <h2 class="section-title">What Neighbors Are Saying</h2>
+    </div>
+
+    <div class="testimonials">
+      <figure class="testimonial reveal">
+        <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>&ldquo;Jesse&rsquo;s the best! He&rsquo;s completed several projects for us, and we will be hiring him for more in the future. Highly competent, hard working, trustworthy, and generally a pleasure to work with. Highly recommend!&rdquo;</blockquote>
+        <figcaption>Demian Lewis <span>· Keaʻau</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="reveal" style="text-align:center;max-width:720px;margin:0 auto">
       <h2 class="section-title">Leave a Review</h2>
       <p class="section-lede" style="margin:0 auto 30px">Did we build something for you? I'd be honored if you'd share how it went — your words help other island families find honest craftsmanship.</p>
       <a href="https://g.page/r/CY4qAdwirEj0EBM/review" class="btn btn-gold" target="_blank" rel="noopener">★ Review us on Google</a>
